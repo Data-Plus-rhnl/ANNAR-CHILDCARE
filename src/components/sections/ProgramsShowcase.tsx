@@ -93,7 +93,7 @@ export default function ProgramsShowcase() {
   }, []);
 
   return (
-    <section className="classes-section relative bg-[#830201] text-white py-[150px] min-h-[960px] select-none flex flex-col justify-center">
+    <section className="classes-section relative bg-[#830201] text-white py-14 sm:py-20 lg:py-[120px] select-none flex flex-col justify-center overflow-hidden">
       {/* ================= EXACT ORIGINAL PARALLAX SCENE (ICONS 1 TO 7) ================= */}
       <div
         ref={sceneRef}
@@ -129,12 +129,12 @@ export default function ProgramsShowcase() {
 
       {/* ================= DIVISION 1: MASCOT GIRL (anim-icon-13.png) ON FAR-LEFT ================= */}
       <div
-        className="absolute float-bob-y pointer-events-none z-30 hidden md:block"
+        className="absolute float-bob-y pointer-events-none z-30 hidden xl:block"
         style={{
-          left: "45px",
-          bottom: "-70px",
-          width: "270px",
-          height: "400px",
+          left: "30px",
+          bottom: "-50px",
+          width: "240px",
+          height: "360px",
         }}
       >
         <Image
@@ -146,69 +146,65 @@ export default function ProgramsShowcase() {
         />
       </div>
 
-      <div className="max-w-[1800px] mx-auto px-6 sm:px-10 lg:px-14 w-full relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-10 xl:gap-14">
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-14 w-full relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10 xl:gap-14">
           {/* ================= DIVISION 2: PROGRAMS OFFERED TEXT ================= */}
-          <div className="w-full lg:w-[420px] xl:w-[460px] shrink-0 space-y-7 relative pb-32 lg:pb-36 pl-0 lg:pl-32 xl:pl-36">
-            <div className="space-y-4">
+          <div className="w-full lg:w-[400px] xl:w-[460px] shrink-0 space-y-5 sm:space-y-6 relative pb-4 sm:pb-6 lg:pb-24 pl-0 lg:pl-16 xl:pl-32 text-center lg:text-left">
+            <div className="space-y-3">
               {/* Exact Original Subtitle with lines */}
-              <div className="relative inline-flex items-center gap-4">
-                <span className="w-10 h-[2px] bg-[#ff7162]" />
-                <h5 className="text-[16px] sm:text-[17px] font-black text-[#ff7162] text-center leading-[24px]">
-                  Programs Offered by Annar
-                  <br />
-                  ChildCare
+              <div className="inline-flex items-center gap-3 justify-center lg:justify-start">
+                <span className="w-8 sm:w-10 h-[2px] bg-[#ff7162]" />
+                <h5 className="text-[14px] sm:text-[16px] font-black text-[#ff7162] tracking-normal uppercase">
+                  Programs Offered
                 </h5>
-                <span className="w-10 h-[2px] bg-[#ff7162]" />
+                <span className="w-8 sm:w-10 h-[2px] bg-[#ff7162]" />
               </div>
 
-              {/* Exact Original Title with #2b3c6b color */}
-              <h2 className="text-4xl sm:text-5xl lg:text-[48px] font-black text-[#2b3c6b] leading-[54px] tracking-tight">
-                ChildCare
-                <br />
-                Programs
+              {/* Title */}
+              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-white leading-tight sm:leading-[52px] tracking-tight">
+                ChildCare Programs
               </h2>
             </div>
 
-            {/* Exact Original Narrative Text */}
-            <p className="text-[15px] sm:text-[16px] text-white leading-[28px] font-normal max-w-md">
-              Discover a world of art and learning at Annar ChildCare! Our programs blend creativity, academic foundatiion and critical thinking to provide a well-rounded experience for every age group of children aged 0-12 years.
+            {/* Narrative Text */}
+            <p className="text-[14px] sm:text-[15px] text-white/90 leading-relaxed sm:leading-[26px] font-normal max-w-md mx-auto lg:mx-0">
+              Discover a world of art and learning at Annar ChildCare! Our programs blend creativity, academic foundation and critical thinking to provide a well-rounded experience for every age group.
             </p>
 
-            {/* Exact Original Navigation Buttons (< >) */}
-            <div className="flex items-center gap-4 pt-3">
+            {/* Navigation Buttons (< >) */}
+            <div className="flex items-center justify-center lg:justify-start gap-3 pt-2">
               <button
                 type="button"
                 onClick={() => swiperRef.current?.slidePrev()}
-                className="w-[60px] h-[60px] rounded-full bg-[#ff7162] hover:bg-white text-white hover:text-[#2b3c6b] flex items-center justify-center transition-all duration-300 active:scale-95 cursor-pointer text-xl font-bold z-30"
+                className="w-12 h-12 sm:w-[54px] sm:h-[54px] rounded-full bg-[#ff7162] hover:bg-white text-white hover:text-[#830201] flex items-center justify-center transition-all duration-300 active:scale-95 cursor-pointer shadow-lg"
                 aria-label="Previous Program"
               >
-                <ChevronLeft className="w-7 h-7 stroke-[3]" />
+                <ChevronLeft className="w-6 h-6 stroke-[3]" />
               </button>
               <button
                 type="button"
                 onClick={() => swiperRef.current?.slideNext()}
-                className="w-[60px] h-[60px] rounded-full bg-[#ff7162] hover:bg-white text-white hover:text-[#2b3c6b] flex items-center justify-center transition-all duration-300 active:scale-95 cursor-pointer text-xl font-bold z-30"
+                className="w-12 h-12 sm:w-[54px] sm:h-[54px] rounded-full bg-[#ff7162] hover:bg-white text-white hover:text-[#830201] flex items-center justify-center transition-all duration-300 active:scale-95 cursor-pointer shadow-lg"
                 aria-label="Next Program"
               >
-                <ChevronRight className="w-7 h-7 stroke-[3]" />
+                <ChevronRight className="w-6 h-6 stroke-[3]" />
               </button>
             </div>
           </div>
 
           {/* ================= DIVISION 3: CARDS INFINITE CAROUSEL ================= */}
-          <div className="flex-1 min-w-0 overflow-hidden">
+          <div className="flex-1 min-w-0 w-full overflow-hidden">
             <Swiper
               modules={[Autoplay, Navigation]}
               loop={true}
               speed={500}
-              spaceBetween={28}
+              spaceBetween={20}
               slidesPerView={1}
               breakpoints={{
-                640: { slidesPerView: 1, spaceBetween: 20 },
+                560: { slidesPerView: 1.3, spaceBetween: 20 },
                 768: { slidesPerView: 2, spaceBetween: 24 },
-                1024: { slidesPerView: 3, spaceBetween: 28 },
-                1440: { slidesPerView: 3, spaceBetween: 28 },
+                1024: { slidesPerView: 2.5, spaceBetween: 24 },
+                1280: { slidesPerView: 3, spaceBetween: 28 },
               }}
               autoplay={{
                 delay: 5000,
@@ -218,13 +214,13 @@ export default function ProgramsShowcase() {
               onBeforeInit={(swiper) => {
                 swiperRef.current = swiper;
               }}
-              className="w-full cursor-grab active:cursor-grabbing"
+              className="w-full cursor-grab active:cursor-grabbing pb-4"
             >
               {cards.map((card) => (
                 <SwiperSlide key={card.id} className="!h-auto flex">
-                  <div className="w-full min-h-[660px] bg-white rounded-[20px] overflow-hidden flex flex-col justify-between group transition-all duration-300 select-none">
-                    {/* Clean Pure White Photo Box */}
-                    <div className="relative h-72 w-full bg-white overflow-hidden">
+                  <div className="w-full min-h-[560px] sm:min-h-[620px] bg-white rounded-[20px] overflow-hidden flex flex-col justify-between group transition-all duration-300 select-none shadow-xl">
+                    {/* Photo Box */}
+                    <div className="relative h-56 sm:h-64 w-full bg-white overflow-hidden shrink-0">
                       <Image
                         src={card.image}
                         alt={card.title}
@@ -234,45 +230,45 @@ export default function ProgramsShowcase() {
                     </div>
 
                     {/* Lower Content */}
-                    <div className="relative px-8 pt-9 pb-6 flex-1 flex flex-col justify-between bg-white text-left">
-                      {/* 68px Circular Action Arrow Button (link-btn) */}
+                    <div className="relative px-6 sm:px-8 pt-7 sm:pt-8 pb-5 flex-1 flex flex-col justify-between bg-white text-left">
+                      {/* Circular Action Arrow Button */}
                       <Link
                         href={card.href}
-                        className={`absolute -top-8 right-7 w-[68px] h-[68px] rounded-full ${card.btnBg} text-white flex items-center justify-center transition-all duration-500 group-hover:rotate-180 group-hover:scale-105`}
+                        className={`absolute -top-6 sm:-top-7 right-5 sm:right-7 w-12 h-12 sm:w-14 sm:h-14 rounded-full ${card.btnBg} text-white flex items-center justify-center transition-all duration-500 group-hover:rotate-180 group-hover:scale-105 shadow-md`}
                         aria-label="View Program"
                       >
-                        <ArrowRight className="w-7 h-7 stroke-[3]" />
+                        <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
                       </Link>
 
-                      <div className="space-y-3.5">
+                      <div className="space-y-3">
                         {/* Program Title */}
-                        <h3 className="text-[23px] sm:text-[24px] font-black text-[#2b3c6b] leading-tight min-h-[58px] whitespace-pre-line">
-                          <Link href={card.href} className="hover:text-[#ff7162] transition-colors">
+                        <h3 className="text-xl sm:text-[22px] font-black text-[#2b3c6b] leading-snug min-h-[48px] sm:min-h-[54px] whitespace-pre-line">
+                          <Link href={card.href} className="hover:text-[#830201] transition-colors">
                             {card.title}
                           </Link>
                         </h3>
 
                         {/* Pricing Breakdown */}
-                        <div className="space-y-1 pt-1">
+                        <div className="space-y-1">
                           {card.prices.map((p, pIdx) => (
                             <div key={pIdx} className="space-y-0.5">
-                              <p className="text-[13px] text-stone-600 font-medium">{p.label}</p>
-                              <p className="text-[20px] font-black text-[#ff7162]">{p.amount}</p>
+                              <p className="text-xs text-stone-600 font-medium">{p.label}</p>
+                              <p className="text-lg sm:text-[20px] font-black text-[#ff7162]">{p.amount}</p>
                             </div>
                           ))}
 
                           {/* Generous Vertical Spacer for Single-price cards */}
-                          {card.hasExtraSpacing && <div className="h-10" />}
+                          {card.hasExtraSpacing && <div className="h-6 sm:h-8" />}
 
-                          <p className="text-[13px] text-stone-700 pt-2 font-semibold">
+                          <p className="text-xs sm:text-[13px] text-stone-700 pt-1 font-semibold">
                             <strong>Full Amount: </strong> {card.fullAmount}
                           </p>
                         </div>
                       </div>
 
-                      {/* Exact SVG Curvy Badge (icon-4.svg) with exact padding & zero extra margin */}
+                      {/* SVG Curvy Badge (icon-4.svg) */}
                       <div
-                        className="w-full h-[68px] flex items-center justify-center text-white text-[12px] font-bold tracking-wider uppercase px-4 mt-4"
+                        className="w-full h-14 sm:h-16 flex items-center justify-center text-white text-[11px] sm:text-[12px] font-bold tracking-wider uppercase px-4 mt-4"
                         style={{
                           backgroundImage: "url(/images/icons/icon-4.svg)",
                           backgroundSize: "100% 100%",
@@ -280,11 +276,11 @@ export default function ProgramsShowcase() {
                           backgroundPosition: "center",
                         }}
                       >
-                        <div className="flex items-center justify-center gap-5 w-full">
+                        <div className="flex items-center justify-center gap-4 sm:gap-5 w-full">
                           <span>
                             AGE: <span className="text-white font-black">{card.ageText}</span>
                           </span>
-                          <span className="h-5 w-px border-r border-dashed border-red-300/40" />
+                          <span className="h-4 w-px border-r border-dashed border-red-300/40" />
                           <span>
                             SIZE: <span className="text-white font-black">{card.sizeText}</span>
                           </span>

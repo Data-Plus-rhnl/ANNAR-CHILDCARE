@@ -80,22 +80,22 @@ export default function EnrollCtaBanner() {
       </div>
 
       {/* ================= CENTER CONTENT CONTAINER ================= */}
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 relative z-20 text-center space-y-7">
-        {/* Luxury Micro-Badge */}
-        <div className="inline-flex items-center gap-2.5 backdrop-blur-md bg-white/15 border border-white/20 px-5 py-2 rounded-full shadow-lg">
-          <Sparkles className="w-4 h-4 text-amber-300 animate-pulse" />
-          <span className="text-xs sm:text-[13px] font-black uppercase tracking-widest text-amber-100">
-            Now Accepting Enrollments • Ages Newborn to School-Age
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 relative z-20 text-center space-y-6 sm:space-y-7">
+        {/* Micro-Badge */}
+        <div className="inline-flex items-center gap-2 backdrop-blur-md bg-white/15 border border-white/20 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full shadow-lg">
+          <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse shrink-0" />
+          <span className="text-[10px] sm:text-[13px] font-black uppercase tracking-wider text-amber-100">
+            Accepting Enrollments • Ages 0–12
           </span>
         </div>
 
         {/* Subtitle & Main Title */}
-        <div className="space-y-3">
-          <h4 className="text-lg sm:text-xl font-extrabold text-amber-200 tracking-wide">
+        <div className="space-y-2 sm:space-y-3">
+          <h4 className="text-base sm:text-xl font-extrabold text-amber-200 tracking-wide">
             Join Our Family
           </h4>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-[54px] font-black text-white leading-[1.12] tracking-tight max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-4xl lg:text-[50px] font-black text-white leading-tight sm:leading-[1.12] tracking-tight max-w-4xl mx-auto">
             Enrol Your Child at{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-white to-orange-200">
               Annar Child Care
@@ -104,16 +104,16 @@ export default function EnrollCtaBanner() {
         </div>
 
         {/* Supporting Narrative */}
-        <p className="text-[16px] sm:text-[19px] text-stone-200 font-medium max-w-2xl mx-auto leading-relaxed">
+        <p className="text-sm sm:text-lg text-stone-200 font-medium max-w-2xl mx-auto leading-relaxed px-2">
           Experience a nurturing, licensed community where your child&apos;s artistic creativity, confidence, and developmental growth is our highest joy!
         </p>
 
-        {/* High-Converting Action CTAs */}
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+        {/* Action CTAs */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 w-full max-w-md mx-auto sm:max-w-none">
           {/* Primary Coral CTA Button */}
           <Link
             href="/contact-us"
-            className="flex items-center gap-2.5 bg-gradient-to-r from-[#ff7162] to-[#ff523d] hover:from-[#fa5b4a] hover:to-[#e63f2b] text-white px-9 py-4 rounded-full font-black text-sm sm:text-[15px] tracking-wider uppercase shadow-[0_10px_35px_rgba(255,113,98,0.4)] hover:shadow-[0_15px_45px_rgba(255,113,98,0.6)] hover:scale-105 active:scale-95 transition-all duration-300"
+            className="flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-r from-[#ff7162] to-[#ff523d] hover:from-[#fa5b4a] hover:to-[#e63f2b] text-white px-8 py-3.5 sm:px-9 sm:py-4 rounded-full font-black text-xs sm:text-[15px] tracking-wider uppercase shadow-[0_8px_30px_rgba(255,113,98,0.4)] hover:scale-105 active:scale-95 transition-all duration-300"
           >
             <span>Enroll Now</span>
             <ArrowRight className="w-4 h-4" />
@@ -122,7 +122,7 @@ export default function EnrollCtaBanner() {
           {/* Secondary Quick Call Button */}
           <a
             href="tel:+17788227120"
-            className="flex items-center gap-2.5 backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/25 text-white px-7 py-4 rounded-full font-extrabold text-sm sm:text-[15px] tracking-wide transition-all duration-300 hover:scale-105"
+            className="flex items-center justify-center gap-2 w-full sm:w-auto backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/25 text-white px-6 py-3.5 sm:px-7 sm:py-4 rounded-full font-extrabold text-xs sm:text-[15px] tracking-wide transition-all duration-300 hover:scale-105"
           >
             <Phone className="w-4 h-4 text-amber-300" />
             <span>Call (778) 822-7120</span>
@@ -130,16 +130,16 @@ export default function EnrollCtaBanner() {
         </div>
 
         {/* Bottom Trust & Feature Pills */}
-        <div className="pt-4 flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs sm:text-sm text-stone-200/90 font-bold border-t border-white/10 max-w-3xl mx-auto mt-8">
-          <div className="flex items-center gap-2">
+        <div className="pt-4 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-stone-200/90 font-bold border-t border-white/10 max-w-3xl mx-auto mt-6 sm:mt-8">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
             <span>Fraser Health Licensed</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
             <span>Fine Arts Curriculum</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
             <span>Certified Early Educators</span>
           </div>

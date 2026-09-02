@@ -36,19 +36,19 @@ export default function ThreePillars() {
   ];
 
   return (
-    <section className="relative -mt-8 xs:-mt-12 sm:-mt-20 lg:-mt-28 z-30 pb-12 sm:pb-16 select-none">
+    <section className="relative mt-3 sm:mt-6 md:-mt-16 lg:-mt-28 z-30 pb-10 sm:pb-16 select-none">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {pillars.map((item, index) => (
             <div
               key={index}
-              className="group bg-white rounded-[20px] p-6 xs:p-7 sm:p-10 pt-10 xs:pt-12 sm:pt-14 pb-8 sm:pb-12 shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-500 flex flex-col items-center text-center justify-between"
+              className="group bg-white rounded-[22px] p-6 sm:p-8 lg:p-10 pt-8 sm:pt-12 pb-7 sm:pb-10 shadow-[0_10px_35px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col items-center text-center justify-between border border-stone-100"
             >
-              {/* Top: 2-Layer Composite Icon (Foreground Vector Glyph + Rotating Pastel Background Shape) */}
-              <div className="relative inline-block mb-6 sm:mb-7">
+              {/* Top: 2-Layer Composite Icon */}
+              <div className="relative inline-block mb-5 sm:mb-6">
                 {/* Foreground Vector Icon Glyph */}
                 <i
-                  className={`${item.flaticonClass} ${item.iconColor} text-[52px] sm:text-[64px] leading-none relative z-10 block transition-transform duration-300`}
+                  className={`${item.flaticonClass} ${item.iconColor} text-[48px] sm:text-[60px] leading-none relative z-10 block transition-transform duration-300`}
                 />
 
                 {/* Rotating Pastel Background Shape */}
@@ -69,12 +69,12 @@ export default function ThreePillars() {
               </div>
 
               {/* Title with hover color change */}
-              <h3 className="text-xl sm:text-[22px] font-black text-[#2b3c6b] group-hover:text-[#ff7162] transition-colors mb-3 sm:mb-5 leading-tight">
+              <h3 className="text-lg sm:text-[21px] font-black text-[#2b3c6b] group-hover:text-[#ff7162] transition-colors mb-2.5 sm:mb-4 leading-tight">
                 <Link href="#">{item.title}</Link>
               </h3>
 
               {/* Description */}
-              <p className="text-sm sm:text-[15px] text-[#666666] leading-relaxed sm:leading-[26px] font-normal text-center flex-1">
+              <p className="text-[13.5px] sm:text-[14.5px] text-[#666666] leading-relaxed sm:leading-[25px] font-normal text-center flex-1">
                 {item.text}
               </p>
             </div>

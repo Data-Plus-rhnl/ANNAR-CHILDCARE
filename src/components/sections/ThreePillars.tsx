@@ -36,24 +36,24 @@ export default function ThreePillars() {
   ];
 
   return (
-    <section className="relative -mt-16 sm:-mt-24 lg:-mt-32 z-30 pb-16 select-none">
+    <section className="relative -mt-8 xs:-mt-12 sm:-mt-20 lg:-mt-28 z-30 pb-12 sm:pb-16 select-none">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {pillars.map((item, index) => (
             <div
               key={index}
-              className="group bg-white rounded-[20px] p-8 sm:p-10 pt-14 pb-12 shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-500 flex flex-col items-center text-center justify-between"
+              className="group bg-white rounded-[20px] p-6 xs:p-7 sm:p-10 pt-10 xs:pt-12 sm:pt-14 pb-8 sm:pb-12 shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-500 flex flex-col items-center text-center justify-between"
             >
               {/* Top: 2-Layer Composite Icon (Foreground Vector Glyph + Rotating Pastel Background Shape) */}
-              <div className="relative inline-block mb-7">
+              <div className="relative inline-block mb-6 sm:mb-7">
                 {/* Foreground Vector Icon Glyph */}
                 <i
-                  className={`${item.flaticonClass} ${item.iconColor} text-[64px] leading-none relative z-10 block transition-transform duration-300`}
+                  className={`${item.flaticonClass} ${item.iconColor} text-[52px] sm:text-[64px] leading-none relative z-10 block transition-transform duration-300`}
                 />
 
                 {/* Rotating Pastel Background Shape */}
                 <div
-                  className="absolute -top-2.5 -right-5 pointer-events-none z-0 transition-transform duration-500 group-hover:rotate-[25deg]"
+                  className="absolute -top-2 -right-4 sm:-top-2.5 sm:-right-5 pointer-events-none z-0 transition-transform duration-500 group-hover:rotate-[25deg]"
                   style={{
                     width: `${item.shapeWidth}px`,
                     height: `${item.shapeHeight}px`,
@@ -69,12 +69,12 @@ export default function ThreePillars() {
               </div>
 
               {/* Title with hover color change */}
-              <h3 className="text-[22px] font-black text-[#2b3c6b] group-hover:text-[#ff7162] transition-colors mb-5 leading-tight">
+              <h3 className="text-xl sm:text-[22px] font-black text-[#2b3c6b] group-hover:text-[#ff7162] transition-colors mb-3 sm:mb-5 leading-tight">
                 <Link href="#">{item.title}</Link>
               </h3>
 
               {/* Description */}
-              <p className="text-[15px] text-[#666666] leading-[26px] font-normal text-center flex-1">
+              <p className="text-sm sm:text-[15px] text-[#666666] leading-relaxed sm:leading-[26px] font-normal text-center flex-1">
                 {item.text}
               </p>
             </div>

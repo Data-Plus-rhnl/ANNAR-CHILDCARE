@@ -51,7 +51,7 @@ export default function HeroSlider() {
   };
 
   return (
-    <section className="relative h-[560px] sm:h-[620px] lg:h-[680px] w-full overflow-hidden bg-stone-900">
+    <section className="relative h-[480px] xs:h-[520px] sm:h-[600px] lg:h-[680px] w-full overflow-hidden bg-stone-900 select-none">
       {/* Slides */}
       {slides.map((slide, index) => {
         const isActive = index === current;
@@ -71,28 +71,30 @@ export default function HeroSlider() {
               className="object-cover object-center"
             />
 
-            {/* Dark overlay for text readability */}
-            <div className="absolute inset-0 bg-black/40 sm:bg-black/35" />
+            {/* Dark gradient overlay for optimal readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/30 sm:from-black/60 sm:to-transparent" />
 
             {/* Slide Content */}
-            <div className="max-w-7xl mx-auto h-full px-6 sm:px-12 flex items-center relative z-20 pb-16 sm:pb-24">
-              <div className="max-w-2xl space-y-4">
+            <div className="max-w-7xl mx-auto h-full px-4 xs:px-6 sm:px-12 flex items-center relative z-20 pb-12 xs:pb-16 sm:pb-24">
+              <div className="max-w-xl sm:max-w-2xl space-y-2.5 sm:space-y-4 pr-12 sm:pr-0">
                 {/* Orange/Peach Tagline */}
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#ff6b57] drop-shadow-md">
-                  {slide.tag}
-                </h3>
+                <div className="inline-block">
+                  <span className="text-xs xs:text-sm sm:text-xl lg:text-2xl font-extrabold text-[#ff7162] drop-shadow-md tracking-wide uppercase sm:normal-case">
+                    {slide.tag}
+                  </span>
+                </div>
 
                 {/* Main Headline */}
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.15] drop-shadow-lg whitespace-pre-line">
+                <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.18] sm:leading-[1.12] drop-shadow-lg whitespace-pre-line">
                   {slide.title}
                 </h1>
 
                 {/* Optional CTA Button */}
                 {slide.buttonText && slide.buttonHref && (
-                  <div className="pt-2">
+                  <div className="pt-2 sm:pt-3">
                     <Link
                       href={slide.buttonHref}
-                      className="inline-block bg-[#830201] hover:bg-[#a10e0c] text-white px-8 py-3.5 rounded-full font-bold text-base shadow-xl transition-transform hover:scale-105"
+                      className="inline-block bg-[#830201] hover:bg-[#a10e0c] text-white px-6 py-2.5 xs:px-7 xs:py-3 sm:px-8 sm:py-3.5 rounded-full font-bold text-xs xs:text-sm sm:text-base shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 border border-red-500/20"
                     >
                       {slide.buttonText}
                     </Link>
@@ -104,29 +106,67 @@ export default function HeroSlider() {
         );
       })}
 
-      {/* Right Side Orange Arrow Navigation Buttons */}
-      <div className="absolute right-4 sm:right-10 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-3">
+      {/* Navigation Controls: Desktop / Tablet Floating Stack */}
+      <div className="hidden sm:flex absolute right-4 sm:right-8 lg:right-10 top-1/2 -translate-y-1/2 z-30 flex-col gap-3">
         <button
           type="button"
           onClick={prevSlide}
-          className="w-12 h-12 rounded-full bg-[#ff6b57] hover:bg-[#ff5138] text-white shadow-xl flex items-center justify-center transition-transform hover:scale-110 active:scale-95"
+          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#ff7162] hover:bg-[#ff5138] text-white shadow-xl flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 focus:outline-none"
           aria-label="Previous Slide"
         >
-          <ChevronLeft className="w-6 h-6 stroke-[3]" />
+          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
         </button>
         <button
           type="button"
           onClick={nextSlide}
-          className="w-12 h-12 rounded-full bg-[#ff6b57] hover:bg-[#ff5138] text-white shadow-xl flex items-center justify-center transition-transform hover:scale-110 active:scale-95"
+          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#ff7162] hover:bg-[#ff5138] text-white shadow-xl flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 focus:outline-none"
           aria-label="Next Slide"
         >
-          <ChevronRight className="w-6 h-6 stroke-[3]" />
+          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
         </button>
+      </div>
+
+      {/* Mobile Slide Navigation & Indicators (placed above bottom wave) */}
+      <div className="sm:hidden absolute bottom-6 left-4 right-4 z-30 flex items-center justify-between pointer-events-auto">
+        {/* Slide Indicator Dots */}
+        <div className="flex items-center gap-1.5 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => setCurrent(i)}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === current ? "w-6 bg-[#ff7162]" : "w-2 bg-white/60"
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Compact Mobile Prev/Next Arrows */}
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={prevSlide}
+            className="w-8 h-8 rounded-full bg-[#ff7162] text-white shadow-md flex items-center justify-center active:scale-90"
+            aria-label="Previous Slide"
+          >
+            <ChevronLeft className="w-4 h-4 stroke-[3]" />
+          </button>
+          <button
+            type="button"
+            onClick={nextSlide}
+            className="w-8 h-8 rounded-full bg-[#ff7162] text-white shadow-md flex items-center justify-center active:scale-90"
+            aria-label="Next Slide"
+          >
+            <ChevronRight className="w-4 h-4 stroke-[3]" />
+          </button>
+        </div>
       </div>
 
       {/* Bottom Wave Cutout */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 lg:h-32 bg-bottom bg-cover z-20 pointer-events-none"
+        className="absolute bottom-0 left-0 right-0 h-10 xs:h-14 sm:h-20 lg:h-28 bg-bottom bg-cover z-20 pointer-events-none"
         style={{
           backgroundImage: "url(/images/icons/slider-shap.png)",
           backgroundRepeat: "no-repeat",

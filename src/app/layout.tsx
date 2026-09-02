@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   description:
     "Premier licensed childcare and daycare center in Port Moody, BC. Offering Infant & Toddler Care, 3-5 Daycare, Before/After School Care, and Fine Arts Curriculum.",
   keywords: siteConfig.seo.keywords,
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/images/annar-small-logo.png",
+  },
   openGraph: {
     title: "Annar Child Care | Port Moody, BC",
     description:

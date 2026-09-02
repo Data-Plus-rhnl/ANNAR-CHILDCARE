@@ -1,0 +1,108 @@
+import { ProgramItem } from "@/types";
+
+export const programs: ProgramItem[] = [
+  {
+    id: "infant-toddler",
+    slug: "infant-toddler-care-program",
+    title: "Toddler & Infant Care Program",
+    shortTitle: "Toddler & Infant Care",
+    ageRange: "18 Months – 3 Years",
+    category: "core",
+    tagline: "Gentle, attentive care focusing on early milestones, sensory exploration, and emotional security.",
+    summary:
+      "Our Infant & Toddler room offers a warm, calm, and loving atmosphere where infants and toddlers build confidence, motor skills, and secure bonds with experienced educators.",
+    description:
+      "At Annar Child Care, our Infant and Toddler Program is designed to nurture your child's physical, emotional, and cognitive growth. We provide individualized attention, safe sensory activities, music, and language development within a peaceful environment.",
+    image: "/images/resource/class-1.jpg",
+    icon: "Baby",
+    badge: "18m - 3 yrs",
+    seats: "12 Seats",
+    ccfriPrice: "$1,070 / month",
+    fullPrice: "$1,970 / month",
+    highlights: [
+      "Low child-to-educator ratio for personalized care",
+      "Sensory motor exploration & baby sign language",
+      "Individualized sleep, feeding, and play routines",
+      "Daily communication logs for parents",
+    ],
+    schedule: "Monday – Friday: 7:00 AM – 6:00 PM",
+  },
+  {
+    id: "daycare-3-5",
+    slug: "daycare-program",
+    title: "Daycare Program (Ages 3–5)",
+    shortTitle: "Daycare (Ages 3–5)",
+    ageRange: "3 – 5 Years",
+    category: "core",
+    tagline: "Play-based learning integrated with early literacy, math readiness, and fine arts exploration.",
+    summary:
+      "A comprehensive full-day program preparing preschoolers for kindergarten through hands-on discovery, social-emotional learning, and daily creative arts.",
+    description:
+      "Our 3-5 Daycare Program offers a balance of structured educational activities and child-led creative exploration. Children cultivate critical thinking, teamwork, problem-solving, and self-regulation in our supportive environment.",
+    image: "/images/resource/class-2.jpg",
+    icon: "Sparkles",
+    badge: "Ages 3 - 5 yrs",
+    seats: "18 Seats",
+    ccfriPrice: "$886 / month",
+    fullPrice: "$1,431 / month",
+    highlights: [
+      "Comprehensive Kindergarten readiness curriculum",
+      "Daily Fine Arts, painting, and crafting studio time",
+      "Phonics, early math, and STEM discovery",
+      "Outdoor physical play & nature exploration",
+    ],
+    schedule: "Monday – Friday: 7:00 AM – 6:00 PM",
+  },
+  {
+    id: "before-after-school",
+    slug: "before-after-preschool-care-program",
+    title: "Before & After School Care (Moody Elementary)",
+    shortTitle: "Before / After School",
+    ageRange: "Kindergarten – Grade 5",
+    category: "core",
+    tagline: "Safe, engaging out-of-school care with homework help, arts & crafts, and school transport.",
+    summary:
+      "Convenient care for school-age children with reliable pick-up/drop-off service to local Port Moody schools, healthy snacks, and fun enrichment activities.",
+    description:
+      "Our Before and After School Care offers a safe, stimulating space for elementary students before and after the school bell. We provide homework assistance, structured games, creative arts workshops, and outdoor recreational play.",
+    image: "/images/resource/class-3.jpg",
+    icon: "BookOpenCheck",
+    badge: "K - Gr 5",
+    seats: "12 Seats",
+    ccfriPrice: "From $311 / month",
+    fullPrice: "$631 / month",
+    highlights: [
+      "Safe pick-up and drop-off to Moody Elementary & local schools",
+      "Quiet dedicated homework & study support time",
+      "Nutritious morning & afternoon snacks provided",
+      "Engaging clubs: arts, board games, science, and outdoor sports",
+    ],
+    schedule: "Before School: 7:00 AM – Bell | After School: Bell – 6:00 PM",
+  },
+  {
+    id: "summer-camp",
+    slug: "summer-break",
+    title: "Summer Break Camp 2026",
+    shortTitle: "Summer Camp",
+    ageRange: "Kindergarten – Grade 5",
+    category: "seasonal",
+    tagline: "Action-packed summer weeks featuring themed art studios, outdoor adventures, and fun workshops.",
+    summary:
+      "Keep kids energized and inspired all summer with weekly themed arts, field trips, water play, and creative discovery in Port Moody.",
+    description:
+      "Annar Summer Camp combines sunny outdoor fun with rich artistic exploration. Each week explores a new exciting theme—from Nature Explorers and Little Chefs to Young Artists Studio and Science Sparks!",
+    image: "/images/resource/class-summer.jpg",
+    icon: "Sun",
+    badge: "Summer 2026",
+    seats: "12 Seats",
+    ccfriPrice: "From $880 / month",
+    fullPrice: "$1,200 / month",
+    highlights: [
+      "Exciting weekly themes & outdoor park days",
+      "Fine arts intensive: canvas painting, sculpting, & pottery",
+      "Water play activities & science discoveries",
+      "Flexible weekly registration options for families",
+    ],
+    schedule: "July & August | Monday – Friday: 7:00 AM – 6:00 PM",
+  },
+];

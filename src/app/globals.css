@@ -46,10 +46,115 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-harvest:before { content: "\f106"; }
-.flaticon-abc-block:before { content: "\f112"; }
-.flaticon-earth-globe:before { content: "\f117"; }
+.flaticon-running:before { content: "\f100"; }
+.flaticon-drum:before { content: "\f101"; }
+.flaticon-right-arrow:before { content: "\f102"; }
 .flaticon-next:before { content: "\f103"; }
+.flaticon-bus:before { content: "\f104"; }
+.flaticon-console:before { content: "\f105"; }
+.flaticon-harvest:before { content: "\f106"; }
+.flaticon-pin:before { content: "\f107"; }
+.flaticon-left-quote:before { content: "\f108"; }
+.flaticon-left-quote-1:before { content: "\f109"; }
+.flaticon-add:before { content: "\f10a"; }
+.flaticon-add-1:before { content: "\f10b"; }
+.flaticon-bus-1:before { content: "\f10c"; }
+.flaticon-professor:before { content: "\f10d"; }
+.flaticon-two-users:before { content: "\f10e"; }
+.flaticon-calendar:before { content: "\f10f"; }
+.flaticon-boy:before { content: "\f110"; }
+.flaticon-flask:before { content: "\f111"; }
+.flaticon-abc-block:before { content: "\f112"; }
+.flaticon-teddy-bear:before { content: "\f113"; }
+.flaticon-championship:before { content: "\f114"; }
+.flaticon-playground:before { content: "\f115"; }
+.flaticon-play-button:before { content: "\f116"; }
+.flaticon-earth-globe:before { content: "\f117"; }
+.flaticon-place:before { content: "\f118"; }
+.flaticon-placeholder:before { content: "\f119"; }
+.flaticon-address:before { content: "\f11a"; }
+.flaticon-vintage-hand-phone:before { content: "\f11b"; }
+.flaticon-mail:before { content: "\f11c"; }
+.flaticon-right-arrow-angle:before { content: "\f11d"; }
+.flaticon-back:before { content: "\f11e"; }
+.flaticon-back-1:before { content: "\f11f"; }
+.flaticon-tick:before { content: "\f120"; }
+.flaticon-check-symbol:before { content: "\f121"; }
+.flaticon-clear-button:before { content: "\f122"; }
+.flaticon-cancel:before { content: "\f123"; }
+
+/* ================= PRICING & INFRASTRUCTURE TABLE HOVER (style.css:5161-5280) ================= */
+.infra-pricing-box {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: box-shadow 300ms ease, transform 300ms ease;
+}
+
+.infra-pricing-box:hover {
+  box-shadow: 0 30px 60px rgba(130, 3, 1, 0.3) !important;
+}
+
+.infra-pricing-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #830201;
+  transform: translateY(100%);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.infra-pricing-box:hover::before {
+  transform: translateY(0);
+}
+
+.infra-pricing-box .infra-header {
+  position: relative;
+  z-index: 2;
+  background-color: #830201;
+}
+
+.infra-pricing-box .infra-content-area {
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.infra-pricing-box .infra-item-title,
+.infra-pricing-box strong {
+  color: #2b3c6b;
+  transition: color 300ms ease;
+}
+
+.infra-pricing-box:hover .infra-item-title,
+.infra-pricing-box:hover strong {
+  color: #ffffff !important;
+}
+
+.infra-pricing-box .infra-item-desc,
+.infra-pricing-box span {
+  color: #4b5563;
+  transition: color 300ms ease;
+}
+
+.infra-pricing-box:hover .infra-item-desc,
+.infra-pricing-box:hover span {
+  color: #ffffff !important;
+}
+
+.infra-pricing-box .infra-dashed-line {
+  border-color: #e5e7eb;
+  transition: border-color 300ms ease;
+}
+
+.infra-pricing-box:hover .infra-dashed-line {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
 
 /* ================= GALLERY CURTAIN WIPE EFFECT (style.css:2660-2689) ================= */
 .gallery-block .overlay-box {

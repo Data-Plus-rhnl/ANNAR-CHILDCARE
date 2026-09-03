@@ -1,6 +1,33 @@
+export interface ScheduleEntry {
+  time: string;
+  activity: string;
+  desc?: string;
+}
+
+export interface InfrastructureItem {
+  title: string;
+  desc: string;
+  icon?: string;
+}
+
+export interface WellBeingPillar {
+  title: string;
+  desc: string;
+  icon?: string;
+}
+
+export interface ProgramSubStream {
+  title: string;
+  age: string;
+  desc: string;
+  image: string;
+  amenities: string[];
+}
+
 export interface ProgramItem {
   id: string;
   slug: string;
+  route: string;
   title: string;
   shortTitle: string;
   ageRange: string;
@@ -9,13 +36,19 @@ export interface ProgramItem {
   summary: string;
   description: string;
   image: string;
+  headerBgImage?: string;
   icon: string;
   badge: string;
   seats?: string;
+  hours: string;
   ccfriPrice?: string;
   fullPrice?: string;
   highlights: string[];
   schedule: string;
+  dailySchedule?: ScheduleEntry[];
+  infrastructure?: InfrastructureItem[];
+  wellBeingPillars?: WellBeingPillar[];
+  subStreams?: ProgramSubStream[];
   curriculum?: {
     title: string;
     points: string[];

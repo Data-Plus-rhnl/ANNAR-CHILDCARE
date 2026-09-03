@@ -8,7 +8,6 @@ import {
   ArrowRight,
   Phone,
   CheckCircle2,
-  CalendarCheck,
 } from "lucide-react";
 
 export default function EnrollCtaBanner() {

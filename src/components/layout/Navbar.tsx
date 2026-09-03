@@ -31,11 +31,14 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
+  const [prevPath, setPrevPath] = useState(pathname);
+
+  // Close mobile menu on route change during render
+  if (pathname !== prevPath) {
+    setPrevPath(pathname);
     setMobileOpen(false);
     setActiveDropdown(null);
-  }, [pathname]);
+  }
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {

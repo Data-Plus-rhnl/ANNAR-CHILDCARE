@@ -1,2 +1,11 @@
-// Page section components (Hero, Programs, About, Gallery, Testimonials, Contact)
-export {};
+export { default as HeroSlider } from "./HeroSlider";
+export { default as ThreePillars } from "./ThreePillars";
+export { default as AboutHome } from "./AboutHome";
+export { default as AboutWelcome } from "./AboutWelcome";
+export { default as AboutFineArts } from "./AboutFineArts";
+export { default as ProgramsShowcase } from "./ProgramsShowcase";
+export { default as GalleryAndFacility } from "./GalleryAndFacility";
+export { default as EnrollCtaBanner } from "./EnrollCtaBanner";
+export { default as TestimonialsAndFaq } from "./TestimonialsAndFaq";
+export { default as FaqAccordionSection } from "./FaqAccordionSection";
+export { default as GalleryGridSection } from "./GalleryGridSection";

@@ -24,7 +24,7 @@ export interface ProgramItem {
 
 export interface FAQItem {
   id: string;
-  category: "General" | "Enrollment" | "Daily Life & Health" | "Curriculum";
+  category: "All" | "Philosophy & Learning" | "Programs & Ratios" | "Health & Safety" | "Parent Partnership" | string;
   question: string;
   answer: string;
 }
@@ -32,7 +32,7 @@ export interface FAQItem {
 export interface GalleryItem {
   id: string;
   title: string;
-  category: "Classroom" | "Fine Arts" | "Activities" | "Facility";
+  category: "All" | "Fine Arts" | "Classroom" | "Activities" | "Outdoor" | "Facility" | string;
   src: string;
   alt: string;
 }

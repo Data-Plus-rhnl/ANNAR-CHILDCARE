@@ -12,19 +12,20 @@ import {
 
 export default function EnrollCtaBanner() {
   return (
-    <section className="cta-section relative select-none overflow-hidden py-16 sm:py-20 lg:py-28 bg-gradient-to-b from-[#690100] via-[#830201] to-[#590100] text-white shadow-inner">
-      {/* ================= AMBIENT LIGHTING & GLOWS ================= */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,113,98,0.18)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-rose-500/10 rounded-full blur-3xl pointer-events-none" />
+    <section className="cta-section relative z-20 select-none overflow-visible py-16 sm:py-20 lg:py-28 bg-gradient-to-b from-[#690100] via-[#830201] to-[#590100] text-white shadow-inner">
+      {/* ================= AMBIENT LIGHTING & GLOWS (Contained) ================= */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,113,98,0.18)_0%,transparent_70%)]" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-rose-500/10 rounded-full blur-3xl" />
+      </div>
 
-      {/* ================= 1. TOP-LEFT: 3D YELLOW PYRAMID & PINK SPHERE (anim-icon-9) ================= */}
-      {/* Hanging and floating over the top border */}
+      {/* ================= 1. TOP-LEFT: 3D YELLOW PYRAMID & PINK SPHERE (anim-icon-9) ON FRONT OF LAYERS ================= */}
       <div
-        className="absolute float-bob-x pointer-events-none z-30 hidden xl:block"
+        className="absolute float-bob-x pointer-events-none z-40 hidden xl:block"
         style={{
           left: "80px",
-          top: "-55px",
+          top: "-45px",
           width: "160px",
           height: "120px",
         }}
@@ -34,14 +35,13 @@ export default function EnrollCtaBanner() {
           alt="3D Yellow Pyramid & Pink Ball"
           fill
           priority
-          className="object-contain drop-shadow-xl"
+          className="object-contain drop-shadow-2xl"
         />
       </div>
 
-      {/* ================= 2. MIDDLE-RIGHT: TEAL SATURN PLANET (anim-icon-10: rotate-me) ================= */}
-      {/* Continuously spinning on the right side */}
+      {/* ================= 2. MIDDLE-RIGHT: TEAL SATURN PLANET (anim-icon-10: rotate-me) ON FRONT OF LAYERS ================= */}
       <div
-        className="absolute rotate-me pointer-events-none z-20 hidden xl:block"
+        className="absolute rotate-me pointer-events-none z-40 hidden xl:block"
         style={{
           right: "160px",
           top: "16%",
@@ -54,17 +54,16 @@ export default function EnrollCtaBanner() {
           alt="Teal Saturn Planet"
           fill
           priority
-          className="object-contain drop-shadow-xl"
+          className="object-contain drop-shadow-2xl"
         />
       </div>
 
-      {/* ================= 3. BOTTOM-RIGHT: ORANGE ALARM CLOCK (anim-icon-8: zoom-fade) ================= */}
-      {/* Sits on bottom-right boundary, popping out onto the next section */}
+      {/* ================= 3. BOTTOM-RIGHT: ORANGE ALARM CLOCK (anim-icon-8: zoom-fade) ON FRONT OF LAYERS ================= */}
       <div
-        className="absolute zoom-fade pointer-events-none z-30 hidden xl:block"
+        className="absolute zoom-fade pointer-events-none z-40 hidden xl:block"
         style={{
           right: "60px",
-          bottom: "-100px",
+          bottom: "-70px",
           width: "245px",
           height: "275px",
         }}

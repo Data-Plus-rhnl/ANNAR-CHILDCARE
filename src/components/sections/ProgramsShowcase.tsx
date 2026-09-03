@@ -93,7 +93,7 @@ export default function ProgramsShowcase() {
   }, []);
 
   return (
-    <section className="classes-section relative bg-[#830201] text-white py-14 sm:py-20 lg:py-[120px] select-none flex flex-col justify-center overflow-hidden">
+    <section className="classes-section relative z-20 bg-[#830201] text-white py-14 sm:py-20 lg:py-[120px] select-none flex flex-col justify-center overflow-visible">
       {/* ================= EXACT ORIGINAL PARALLAX SCENE (ICONS 1 TO 7) ================= */}
       <div
         ref={sceneRef}
@@ -108,12 +108,12 @@ export default function ProgramsShowcase() {
         <span data-depth="0.40" className="parallax-layer icon icon-7"></span>
       </div>
 
-      {/* ================= TOP RIGHT ABC BLOCKS (anim-icon-3.png) ================= */}
+      {/* ================= TOP RIGHT ABC BLOCKS (anim-icon-3.png) ON FRONT OF LAYERS ================= */}
       <div
-        className="absolute zoom-fade pointer-events-none z-30 hidden sm:block"
+        className="absolute zoom-fade pointer-events-none z-40 hidden sm:block"
         style={{
-          right: "150px",
-          top: "-90px",
+          right: "clamp(30px, 8vw, 150px)",
+          top: "-70px",
           width: "102px",
           height: "198px",
         }}
@@ -123,16 +123,16 @@ export default function ProgramsShowcase() {
           alt="ABC Blocks"
           fill
           priority
-          className="object-contain"
+          className="object-contain drop-shadow-xl"
         />
       </div>
 
-      {/* ================= DIVISION 1: MASCOT GIRL (anim-icon-13.png) ON FAR-LEFT ================= */}
+      {/* ================= DIVISION 1: MASCOT GIRL (anim-icon-13.png) ON FRONT OF LAYERS ================= */}
       <div
-        className="absolute float-bob-y pointer-events-none z-30 hidden xl:block"
+        className="absolute float-bob-y pointer-events-none z-40 hidden xl:block"
         style={{
           left: "30px",
-          bottom: "-50px",
+          bottom: "-45px",
           width: "240px",
           height: "360px",
         }}
@@ -142,7 +142,7 @@ export default function ProgramsShowcase() {
           alt="Mascot Girl"
           fill
           priority
-          className="object-contain"
+          className="object-contain drop-shadow-2xl"
         />
       </div>
 

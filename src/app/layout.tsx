@@ -48,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={fontSans.variable}>
+    <html lang="en" className={fontSans.variable} data-scroll-behavior="smooth">
       <body className="font-sans antialiased bg-white text-stone-800 min-h-screen flex flex-col">
         <HeaderTop />
         <Navbar />

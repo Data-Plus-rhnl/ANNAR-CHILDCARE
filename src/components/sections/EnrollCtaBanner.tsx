@@ -13,7 +13,7 @@ import {
 
 export default function EnrollCtaBanner() {
   return (
-    <section className="cta-section relative select-none overflow-visible py-20 lg:py-28 bg-gradient-to-b from-[#690100] via-[#830201] to-[#590100] text-white shadow-inner">
+    <section className="cta-section relative select-none overflow-hidden py-16 sm:py-20 lg:py-28 bg-gradient-to-b from-[#690100] via-[#830201] to-[#590100] text-white shadow-inner">
       {/* ================= AMBIENT LIGHTING & GLOWS ================= */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,113,98,0.18)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />

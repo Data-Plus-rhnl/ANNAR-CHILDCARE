@@ -36,7 +36,7 @@ export default function ThreePillars() {
   ];
 
   return (
-    <section className="relative mt-3 sm:mt-6 md:-mt-16 lg:-mt-28 z-30 pb-10 sm:pb-16 select-none">
+    <section className="relative mt-3 sm:mt-6 md:-mt-16 lg:-mt-28 z-30 pb-10 sm:pb-16 select-none overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {pillars.map((item, index) => (

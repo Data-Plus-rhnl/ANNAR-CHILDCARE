@@ -447,25 +447,15 @@ export default function Navbar() {
                 <span>Order Uniform</span>
               </a>
 
-              <div className="grid grid-cols-2 gap-2">
-                <a
-                  href="tel:7788227120"
-                  className="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-white border border-stone-200 text-[#2b3c6b] font-bold text-xs hover:border-[#830201] hover:text-[#830201] transition-colors text-center shadow-xs"
-                >
-                  <Phone className="w-3 h-3 text-[#ff7162]" />
-                  <span>Call Us</span>
-                </a>
-                <Link
-                  href="/contact-us"
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-white border border-stone-200 text-[#2b3c6b] font-bold text-xs hover:border-[#830201] hover:text-[#830201] transition-colors text-center shadow-xs"
-                >
-                  <Sparkles className="w-3 h-3 text-amber-500" />
-                  <span>Book Tour</span>
-                </Link>
-              </div>
+              <a
+                href="tel:7788227120"
+                className="flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-white border border-stone-200 text-[#2b3c6b] font-bold text-xs hover:border-[#830201] hover:text-[#830201] transition-colors text-center shadow-xs"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#ff7162]" />
+                <span>Call (778) 822-7120</span>
+              </a>
 
-              <div className="text-center pt-1 text-[10px] text-stone-500 font-medium leading-tight">
+              <div className="text-center pt-0.5 text-[10px] text-stone-500 font-medium leading-tight">
                 Mon – Fri: 7:00 AM – 6:00 PM • Port Moody, BC
               </div>
             </div>

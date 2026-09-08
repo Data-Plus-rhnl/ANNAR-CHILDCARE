@@ -7,7 +7,7 @@ import { Sparkles, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function AboutWelcome() {
   return (
-    <section className="about-section relative bg-gradient-to-b from-white via-[#faf8f5] to-white pt-14 sm:pt-24 lg:pt-[110px] pb-16 sm:pb-28 lg:pb-[130px] select-none overflow-hidden">
+    <section className="about-section relative bg-gradient-to-b from-white via-[#faf8f5] to-white pt-8 sm:pt-12 lg:pt-14 pb-14 sm:pb-20 lg:pb-24 select-none overflow-hidden">
       {/* ================= ANIMATED FLOATING SHAPES CANVAS ================= */}
       <div className="pointer-events-none absolute inset-0 max-w-[1920px] mx-auto z-10">
         {/* Animated Flying Kite */}

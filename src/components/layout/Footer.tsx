@@ -268,17 +268,26 @@ export default function Footer() {
               <span className="text-stone-300 hidden sm:inline">|</span>
               <span className="text-stone-500">Port Moody, BC</span>
             </p>
-            <p className="text-[11.5px] text-stone-400 flex items-center justify-center md:justify-start gap-1">
+            <p className="text-[11.5px] text-stone-400 flex flex-wrap items-center justify-center md:justify-start gap-1.5">
               <span>Crafted with</span>
               <Heart className="w-3 h-3 text-[#ff7162] fill-[#ff7162]" />
               <span>by</span>
               <a
-                href="https://data-plus.ca/"
+                href="https://quantumflowit.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#830201] font-bold text-stone-600 underline underline-offset-2 transition-colors"
+                className="inline-flex items-center gap-1.5 font-bold text-stone-700 hover:text-[#0b132b] transition-all group"
               >
-                Data Plus Systems Ltd.
+                <span className="relative w-4 h-4 rounded-[4px] overflow-hidden inline-flex items-center justify-center bg-white shadow-xs border border-stone-200 shrink-0 transition-transform group-hover:scale-105">
+                  <Image
+                    src="/images/qf-logo-avatar.png"
+                    alt="Quantum Flow Logo"
+                    width={16}
+                    height={16}
+                    className="w-full h-full object-contain"
+                  />
+                </span>
+                <span className="group-hover:underline underline-offset-2">Quantum Flow</span>
               </a>
             </p>
           </div>

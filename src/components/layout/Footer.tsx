@@ -269,9 +269,7 @@ export default function Footer() {
               <span className="text-stone-500">Port Moody, BC</span>
             </p>
             <p className="text-[11.5px] text-stone-400 flex flex-wrap items-center justify-center md:justify-start gap-1.5">
-              <span>Crafted with</span>
-              <Heart className="w-3 h-3 text-[#ff7162] fill-[#ff7162]" />
-              <span>by</span>
+              <span>Developed by</span>
               <a
                 href="https://quantumflowit.com"
                 target="_blank"
